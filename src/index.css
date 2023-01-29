@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animated background */
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #2b3053;
+  overflow: hidden;
+  z-index: -1;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 28s linear infinite;
+}
+
+.background li:nth-child(0) {
+  left: 13%;
+  width: 121px;
+  height: 121px;
+  bottom: -121px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 63%;
+  width: 189px;
+  height: 189px;
+  bottom: -189px;
+  animation-delay: 1s;
+}
+.background li:nth-child(2) {
+  left: 68%;
+  width: 74px;
+  height: 74px;
+  bottom: -74px;
+  animation-delay: 5s;
+}
+.background li:nth-child(3) {
+  left: 45%;
+  width: 121px;
+  height: 121px;
+  bottom: -121px;
+  animation-delay: 7s;
+}
+.background li:nth-child(4) {
+  left: 59%;
+  width: 172px;
+  height: 172px;
+  bottom: -172px;
+  animation-delay: 11s;
+}
+.background li:nth-child(5) {
+  left: 34%;
+  width: 119px;
+  height: 119px;
+  bottom: -119px;
+  animation-delay: 17s;
+}
+.background li:nth-child(6) {
+  left: 51%;
+  width: 139px;
+  height: 139px;
+  bottom: -139px;
+  animation-delay: 7s;
+}
+.background li:nth-child(7) {
+  left: 10%;
+  width: 136px;
+  height: 136px;
+  bottom: -136px;
+  animation-delay: 22s;
+}
+.background li:nth-child(8) {
+  left: 55%;
+  width: 98px;
+  height: 98px;
+  bottom: -98px;
+  animation-delay: 33s;
+}
+.background li:nth-child(9) {
+  left: 72%;
+  width: 159px;
+  height: 159px;
+  bottom: -159px;
+  animation-delay: 35s;
+}
+
+/* loader */
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #dbdbe8 94%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 30%, #dbdbe8);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-c7wet2 0.8s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* gradient color */
+.button-color {
+  background: #474bff;
+  background: -webkit-linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+  background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+}
