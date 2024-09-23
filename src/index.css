@@ -113,8 +113,8 @@
 /* loader */
 
 .spinner {
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: radial-gradient(farthest-side, #dbdbe8 94%, #0000) top/9px 9px
       no-repeat,

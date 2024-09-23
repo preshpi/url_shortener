@@ -1,15 +1,14 @@
 import React from "react";
 import Animatedbg from "./components/Animatedbg";
 import UrlShort from "./components/urlShort";
-import Nav from "./components/Nav";
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
-    <div className="">
-      <Nav />
-      <div className="items-center grid place-center h-[80vh] mx-auto lg:w-[50%]">
-        <UrlShort />
-        <Animatedbg />
-      </div>
+    <div className="items-center flex flex-col gap-y-3 justify-center h-screen mx-auto w-full">
+      <h1 className="text-[30px] text-white font-bold p-4">MICRO-URL</h1>
+      <UrlShort />
+      <Animatedbg />
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 }
